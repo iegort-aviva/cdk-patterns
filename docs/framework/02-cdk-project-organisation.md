@@ -32,3 +32,6 @@ To avoid these pitfalls, it's recommended to:
 - **Modularize your infrastructure**: Break down your infrastructure code into smaller, logical modules or constructs. This makes your code more manageable, reusable, and easier to understand.
 - **Use multiple stacks**: Organize your resources into multiple stacks based on logical groupings, such as network resources, database resources, and application layers. This allows for more granular control and deployment flexibility.
 - **Leverage higher-level constructs**: Use or create higher-level constructs that encapsulate common patterns or configurations to promote reusability and reduce boilerplate code.
+
+
+## [Project Structure](../../examples/cdk-project/)

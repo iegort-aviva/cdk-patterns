@@ -16,7 +16,7 @@
 3. [AWS CDK in Practice](https://www.amazon.co.uk/AWS-CDK-Practice-Streamline-applications/dp/180181239X)
 4. [The CDK Book ](https://www.thecdkbook.com/) with Golang [examples](https://www.go-on-aws.com/infrastructure-as-go/cdk-go/thecdkbook/)
 
-### [Content](content):
+### [Framework Content](content):
 
 [Introduction](./docs/framework/0-introduction.md)
 
@@ -31,3 +31,5 @@
 5. [Released Management](./docs/framework/05-release-management.md)
 
 6. [Contribution](./docs/framework/06-contribution.md)
+
+### [CDK project example](./examples/cdk-project/)
