@@ -23,7 +23,7 @@ type CustomDomainProps struct {
 
 // Creating custom domain for API Gateway
 func NewCustomDomain(scope constructs.Construct, id *string, props *CustomDomainProps) {
-	tag.AddDevOpsConstructName(scope, &tag.TagProps{TagName: jsii.String("NewCustomDomain"), TagValue: jsii.String("0.0.1")})
+	tag.AddDevOpsConstructTag(scope, &tag.TagProps{TagName: jsii.String("NewCustomDomain"), TagValue: jsii.String("0.0.1")})
 
 	createCustomDomain(scope, id, props)
 }

@@ -10,7 +10,7 @@ import (
 
 type UseCaseTagLabel string
 
-const companyName = "test"
+const orgTabLabel = "test"
 const (
 	devOpsUseCaseTagLabel UseCaseTagLabel = "operations"
 	// ??: Should it be different tags for `default` and `patterns`?
@@ -27,7 +27,7 @@ func (props *TagProps) Validate() error {
 	return nil
 }
 
-func AddDevOpsStackName(scope constructs.Construct, props *TagProps) {
+func AddDevOpsStackNameTag(scope constructs.Construct, props *TagProps) {
 	p := awscdk.TagProps{}
 	if props != nil {
 		p = props.TagProps
@@ -37,7 +37,7 @@ func AddDevOpsStackName(scope constructs.Construct, props *TagProps) {
 	awscdk.Tags_Of(scope).Add(jsii.String(name), props.TagValue, &p)
 }
 
-func AddDevOpsConstructName(scope constructs.Construct, props *TagProps) {
+func AddDevOpsConstructTag(scope constructs.Construct, props *TagProps) {
 	p := awscdk.TagProps{}
 	if props != nil {
 		p = props.TagProps
@@ -48,6 +48,6 @@ func AddDevOpsConstructName(scope constructs.Construct, props *TagProps) {
 }
 
 func createTagName(ucTagLevel UseCaseTagLabel, name string) string {
-	els := []string{companyName, string(ucTagLevel), name}
+	els := []string{orgTabLabel, string(ucTagLevel), name}
 	return strings.Join(els, ":")
 }
