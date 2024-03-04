@@ -1,4 +1,4 @@
-[<- Home](./../../README.md)
+[<- Home](./../../README.md#content)
 
 There are tree approaches can be used
 
