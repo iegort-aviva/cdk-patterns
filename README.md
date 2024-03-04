@@ -31,5 +31,3 @@
 5. [Released Management](./docs/framework/05-release-management.md)
 
 6. [Contribution](./docs/framework/06-contribution.md)
-
-### [CDK project example](./examples/cdk-project/)
