@@ -91,7 +91,7 @@ In the documentation for our custom CDK constructs, we adhere to a standardized 
 For every construct where applicable, we aim to maintain a consistent function builder signature as follows:
 
 ```go
-func NewFoo(scope constructs.Construct, id *string, props *CustomProps)
+func New<Foo>(scope constructs.Construct, id *string, props *<CustomProps>)
 ```
 
 This signature comprises three parameters:
@@ -109,7 +109,7 @@ When defining properties for a construct, the structure of `CustomProps` varies 
 For a `layer 2` (default) construct, which typically enhances or modifies a single AWS resource, the properties should be defined as follows:
 
 ```go
-type CustomProps struct {
+type <CustomProps> struct {
     awscdkmodule.OriginalProps   // Embedding the original properties from the AWS CDK module
     CustomKey *type              // Define additional pointer to custom properties as needed
     // Add other custom fields here
@@ -123,7 +123,7 @@ This approach allows for the inclusion of all original properties from the AWS C
 For `layer 3` (pattern) constructs, which compose multiple AWS resources to implement a higher-level infrastructure pattern, the properties should be structured as:
 
 ```go
-type CustomProps struct {
+type <CustomProps> struct {
     Api        awsapigateway.IRestApi | *awsapigateway.LambdaRestApiProps // Interface or properties for API Gateway
     HostedZone awsroute53.IHostedZone | *awsroute53.HostedZoneProps       // Interface or properties for Route 53 Hosted Zone
     CustomKey  type                                                       // Additional custom properties as required
